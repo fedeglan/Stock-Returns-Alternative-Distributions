@@ -32,7 +32,7 @@ stats['Norm test']=None
 for c in stats.index:
     stats['Norm test'].loc[c]=distr_fit(returns,c,'norm')
     
-#Testing 99 scipy's distributions for all S&P500 constituents
+#Testing 98 scipy's distributions for all S&P500 constituents
 distr=pd.read_excel('distributions.xlsx')['Distribution'].to_list()
 distr_test=pd.DataFrame(columns=distr,index=returns.columns)
 for d in tqdm(distr_test.columns):
